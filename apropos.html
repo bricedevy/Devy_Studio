@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos | Devy Studio</title>
+    <meta name="description" content="Découvrez Devy Studio, son atelier de Moncton, sa machine à broder de 24 têtes, ses forfaits et ses délais.">
+    <meta name="theme-color" content="#12284C">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <!-- Polices Google : Poppins (titres) et Inter (texte) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Feuille de style personnalisée (chargée après Bootstrap pour pouvoir le personnaliser) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="haut">
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+    <!-- ===== EN-TÊTE ET NAVIGATION ===== -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-navy" data-bs-theme="dark" aria-label="Navigation principale">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="images/logo.svg" alt="" width="40" height="40">
+                    <span>Devy Studio</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Ouvrir ou fermer le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="apropos.html" aria-current="page">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="multimedia.html">Multimédia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenu" tabindex="-1">
+        <!-- ===== EN-TÊTE DE PAGE ===== -->
+        <section class="page-header py-4 py-lg-5">
+            <div class="container">
+                <nav aria-label="Fil d'Ariane">
+                    <ol class="breadcrumb mb-3">
+                        <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">À propos</li>
+                    </ol>
+                </nav>
+                <h1 class="display-6 mb-2">À propos de Devy Studio</h1>
+                <p class="lead mb-3">Un atelier de Moncton qui reproduit votre image à l'identique, de la première pièce à la millième.</p>
+                <!-- Ancres internes vers les sections de la page -->
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item me-3"><a href="#histoire">Notre histoire</a></li>
+                    <li class="list-inline-item me-3"><a href="#atouts">Nos atouts</a></li>
+                    <li class="list-inline-item"><a href="#forfaits">Forfaits et délais</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== HISTOIRE ===== -->
+        <section id="histoire" class="py-5" aria-labelledby="titre-histoire">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-12 col-lg-7">
+                        <h2 id="titre-histoire" class="section-title mb-4">Notre histoire</h2>
+                        <p>Devy Studio est né d'une idée simple : offrir aux équipes sportives, aux entreprises et aux organismes de la région une personnalisation de qualité industrielle, avec des délais raisonnables et un interlocuteur unique.</p>
+                        <p>Au cœur de l'atelier se trouve une machine à broder à 24 têtes. Elle brode le même logo sur 24 vêtements en un seul passage, ce qui garantit des pièces identiques et des commandes en série livrées rapidement. À côté, des presses de flocage, une ligne de sublimation et une imprimante grand format complètent l'offre.</p>
+                        <figure class="citation mt-4">
+                            <blockquote class="blockquote">
+                                <p>Un logo bien brodé se reconnaît au premier coup d'œil. Notre travail consiste à le reproduire à l'identique, de la première pièce à la millième.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">Brice Devy, <cite>fondateur de Devy Studio</cite></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <figure class="mb-0">
+                            <img src="images/atelier-24-tetes-600.webp" srcset="images/atelier-24-tetes-600.webp 600w, images/atelier-24-tetes-1200.webp 1200w" sizes="(min-width: 992px) 440px, 100vw" width="1200" height="800" alt="Machine à broder à 24 têtes brodant le même logo D sur 24 t-shirts bleus en même temps." class="img-fluid rounded-4 shadow-sm" loading="lazy">
+                            <figcaption class="small text-secondary mt-2">La machine à 24 têtes brode 24 articles identiques en un seul passage (illustration).</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ATOUTS (liste) ===== -->
+        <section id="atouts" class="py-5 bg-light-ds" aria-labelledby="titre-atouts">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12 col-md-6">
+                        <h2 id="titre-atouts" class="section-title mb-4">Pourquoi nous choisir</h2>
+                        <ul class="fs-5">
+                            <li class="mb-2"><strong>Production en série :</strong> 24 articles identiques brodés par passage.</li>
+                            <li class="mb-2"><strong>Plusieurs procédés au même endroit :</strong> broderie, flocage, sublimation et grand format.</li>
+                            <li class="mb-2"><strong>Du fichier à la livraison :</strong> nous préparons votre logo et vous envoyons une épreuve avant la production.</li>
+                            <li><strong>Contrôle de qualité :</strong> chaque lot est vérifié avant la remise.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2 class="h3 mb-3">Pour aller plus loin</h2>
+                        <p>Curieux de l'histoire de ce savoir-faire ? Lisez l'<a href="https://fr.wikipedia.org/wiki/Broderie" target="_blank" rel="noopener noreferrer">article « Broderie » de Wikipédia<span class="visually-hidden"> (s'ouvre dans un nouvel onglet)</span></a>.</p>
+                        <p class="mb-0">Une question avant de commander ? Écrivez-nous à <a href="mailto:contact@devystudio.example?subject=Question%20avant%20commande">contact@devystudio.example</a> ou passez par la <a href="contact.html">page de contact</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TABLEAU : forfaits et délais ===== -->
+        <section id="forfaits" class="py-5" aria-labelledby="titre-forfaits">
+            <div class="container">
+                <h2 id="titre-forfaits" class="section-title mb-4">Forfaits et délais</h2>
+                <p class="small text-secondary d-lg-none mb-2">Faites glisser le tableau vers la gauche pour voir toutes les colonnes.</p>
+                <!-- .table-responsive : le tableau défile dans son conteneur sur téléphone, sans faire défiler la page.
+                     tabindex et role permettent de le faire défiler au clavier. -->
+                <section class="table-responsive" tabindex="0" aria-label="Tableau des forfaits et des délais par service">
+                    <table class="table table-ds table-striped table-hover align-middle">
+                        <caption class="caption-top">Délais indicatifs, en jours ouvrables</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Service</th>
+                                <th scope="col">Procédé</th>
+                                <th scope="col">Quantité minimale</th>
+                                <th scope="col">Délai standard</th>
+                                <th scope="col">Fichiers acceptés</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Broderie industrielle</th>
+                                <td>Machine à 24 têtes</td>
+                                <td>12 pièces</td>
+                                <td>7 à 10 jours</td>
+                                <td>AI, SVG ou PDF vectoriel</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Flocage flex</th>
+                                <td>Vinyle thermocollant</td>
+                                <td>1 pièce</td>
+                                <td>3 à 5 jours</td>
+                                <td>AI, SVG ou PDF vectoriel</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sublimation sur tasses</th>
+                                <td>Transfert à chaud</td>
+                                <td>6 tasses</td>
+                                <td>3 à 5 jours</td>
+                                <td>PNG ou JPEG haute résolution</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Photo et montage</th>
+                                <td>Séance et retouche</td>
+                                <td>Sur rendez-vous</td>
+                                <td>5 à 7 jours</td>
+                                <td>RAW ou JPEG</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Banderoles grand format</th>
+                                <td>Impression numérique</td>
+                                <td>1 pièce</td>
+                                <td>2 à 4 jours</td>
+                                <td>PDF ou TIFF (150 dpi)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Projets sur mesure</th>
+                                <td>Selon le projet</td>
+                                <td>Selon le projet</td>
+                                <td>Sur soumission</td>
+                                <td>Sur demande</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <p class="mt-4 mb-0">Besoin d'un délai plus court ? <a href="contact.html">Demandez une soumission</a> et précisez votre échéance.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-5">
+                    <p class="d-flex align-items-center gap-2 mb-2 fs-5 fw-bold text-white">
+                        <img src="images/logo.svg" alt="" width="44" height="44">
+                        Devy Studio
+                    </p>
+                    <p class="mb-0">Studio multimédia de personnalisation et d'impression : broderie industrielle, flocage, sublimation, photo et grand format.</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2>Navigation</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="multimedia.html">Multimédia</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h2>Nous joindre</h2>
+                    <address>
+                        123, rue Exemple<br>
+                        Moncton (N.-B.)<br>
+                        <a href="tel:+15065550100">506&#8209;555&#8209;0100</a><br>
+                        <a href="mailto:contact@devystudio.example">contact@devystudio.example</a>
+                    </address>
+                </div>
+            </div>
+            <div class="legal d-flex flex-column flex-sm-row justify-content-between gap-2 mt-4 pt-3">
+                <p class="mb-0">&copy; 2026 Devy Studio. Entreprise fictive, site de démonstration.</p>
+                <p class="mb-0"><a class="retour-haut" href="#haut">&uarr; Retour en haut de la page</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript de Bootstrap (menu hamburger, accordéon, fenêtre modale) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

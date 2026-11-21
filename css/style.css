@@ -1,0 +1,278 @@
+/* =========================================================
+   Devy Studio — feuille de style personnalisée
+   Bootstrap 5.3 gère la grille, les composants et les utilitaires.
+   Ce fichier ne contient que l'identité visuelle (couleurs,
+   typographie, détails) et quelques cas que Bootstrap ne couvre pas.
+   ========================================================= */
+
+/* ---------- 1. Variables : palette et typographie ---------- */
+:root {
+    --ds-navy: #12284C;        /* bleu marine : navbar, hero, pied de page */
+    --ds-blue: #1D5FD1;        /* bleu vif : liens, boutons principaux   */
+    --ds-blue-dark: #174AA6;
+    --ds-orange: #F59E0B;      /* orange « fil » : accents               */
+    --ds-orange-light: #FBB03B;
+    --ds-light: #F3F6FB;       /* fond des sections claires              */
+    --ds-ink: #1B2433;         /* texte courant                          */
+    --ds-muted: #5B6678;       /* texte secondaire (contraste 5,8:1)     */
+
+    /* On réutilise les variables de Bootstrap plutôt que de réécrire ses règles */
+    --bs-body-font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    --bs-body-color: var(--ds-ink);
+    --bs-body-color-rgb: 27, 36, 51;
+    --bs-heading-color: var(--ds-navy);
+    --bs-primary: var(--ds-blue);
+    --bs-primary-rgb: 29, 95, 209;
+    --bs-link-color: var(--ds-blue);
+    --bs-link-color-rgb: 29, 95, 209;
+    --bs-link-hover-color: var(--ds-blue-dark);
+    --bs-link-hover-color-rgb: 23, 74, 166;
+    --bs-secondary-color: var(--ds-muted);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.navbar-brand, .display-5 {
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    font-weight: 700;
+}
+
+/* Le texte courant reste lisible : les liens sont soulignés (pas seulement colorés) */
+main p a, main li a:not(.btn):not(.nav-link):not(.list-group-item), footer a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ---------- 2. Accessibilité ---------- */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 2000;
+    padding: .75rem 1rem;
+    background: #fff;
+    color: var(--ds-navy);
+    font-weight: 600;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible {
+    outline: 3px solid var(--ds-blue);
+    outline-offset: 2px;
+}
+.navbar :focus-visible,
+.hero :focus-visible,
+.site-footer :focus-visible {
+    outline-color: var(--ds-orange);
+}
+
+main:focus { outline: none; }
+
+/* ---------- 3. Boutons ---------- */
+.btn-primary {
+    --bs-btn-bg: var(--ds-blue);
+    --bs-btn-border-color: var(--ds-blue);
+    --bs-btn-hover-bg: var(--ds-blue-dark);
+    --bs-btn-hover-border-color: var(--ds-blue-dark);
+    --bs-btn-active-bg: #123C85;
+    --bs-btn-active-border-color: #123C85;
+    --bs-btn-disabled-bg: var(--ds-blue);
+    --bs-btn-disabled-border-color: var(--ds-blue);
+    --bs-btn-font-weight: 600;
+}
+
+/* Bouton d'appel à l'action : texte foncé sur orange (contraste 7,3:1) */
+.btn-accent {
+    --bs-btn-color: var(--ds-ink);
+    --bs-btn-bg: var(--ds-orange);
+    --bs-btn-border-color: var(--ds-orange);
+    --bs-btn-hover-color: var(--ds-ink);
+    --bs-btn-hover-bg: var(--ds-orange-light);
+    --bs-btn-hover-border-color: var(--ds-orange-light);
+    --bs-btn-active-color: var(--ds-ink);
+    --bs-btn-active-bg: #D98B06;
+    --bs-btn-active-border-color: #D98B06;
+    --bs-btn-font-weight: 600;
+}
+
+/* ---------- 3b. Champs de formulaire : bordure assez contrastée (4,3:1) pour repérer chaque champ ---------- */
+.form-control, .form-select, .form-check-input:not(:checked) {
+    border-color: #6B7A94;
+}
+
+/* ---------- 4. Navigation ---------- */
+.bg-navy { background-color: var(--ds-navy); }
+
+.site-header .navbar {
+    --bs-navbar-color: rgba(255, 255, 255, .88);
+    --bs-navbar-hover-color: #fff;
+    --bs-navbar-active-color: #fff;
+    border-bottom: 3px solid var(--ds-orange);
+}
+.site-header .navbar-brand { font-size: 1.25rem; letter-spacing: .2px; }
+.site-header .nav-link { font-weight: 600; }
+
+/* Le lien actif n'est pas signalé par la couleur seule : barre orange dessous */
+.site-header .nav-link.active {
+    box-shadow: inset 0 -3px 0 var(--ds-orange);
+}
+@media (max-width: 991.98px) {
+    .site-header .nav-link.active {
+        box-shadow: inset 4px 0 0 var(--ds-orange);
+        padding-left: .75rem;
+    }
+}
+
+/* ---------- 5. Section héros (accueil) ---------- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(135deg, var(--ds-navy) 0%, #1D3C72 100%);
+}
+.hero h1 { color: #fff; }
+.hero .lead { color: #E3ECFA; }
+.hero .eyebrow { color: var(--ds-orange); }
+/* Ligne de couture décorative en bas du héros */
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+    border-top: 4px dashed var(--ds-orange);
+    opacity: .8;
+}
+
+.eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: .85rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+/* En-tête de page secondaire */
+.page-header {
+    background: var(--ds-light);
+    border-bottom: 1px solid #DCE4F2;
+}
+.breadcrumb { --bs-breadcrumb-divider-color: var(--ds-muted); --bs-breadcrumb-item-active-color: var(--ds-muted); }
+
+/* ---------- 6. Titres de section : point de couture sous le titre ---------- */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    margin-top: .6rem;
+    border-bottom: 4px dashed var(--ds-orange);
+}
+.section-title.text-center::after { margin-inline: auto; }
+
+.bg-light-ds { background: var(--ds-light); }
+
+/* ---------- 7. Chiffres ---------- */
+.stat-number {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--ds-blue);
+}
+
+/* ---------- 8. Cartes de services ---------- */
+.service-card {
+    border: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(18, 40, 76, .12);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(18, 40, 76, .18);
+}
+.service-card .card-title { font-size: 1.2rem; }
+
+/* ---------- 9. Citation ---------- */
+.citation {
+    margin: 0;
+    padding: 1.25rem 1.5rem;
+    background: var(--ds-light);
+    border-left: 5px solid var(--ds-orange);
+    border-radius: .5rem;
+}
+.citation blockquote { font-size: 1.15rem; font-style: italic; margin-bottom: .75rem; }
+.citation .blockquote-footer { margin-bottom: 0; color: var(--ds-muted); }
+
+/* ---------- 10. Tableau ---------- */
+.table-ds thead {
+    --bs-table-bg: var(--ds-navy);
+    --bs-table-color: #fff;
+    --bs-table-border-color: #2F4A7A;
+}
+.table-ds caption { color: var(--ds-muted); font-size: .95rem; }
+.table-ds { min-width: 640px; } /* défile dans son conteneur .table-responsive sur téléphone */
+
+/* ---------- 11. Galerie ---------- */
+.galerie-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: .75rem;
+    background: none;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(18, 40, 76, .15);
+    transition: transform .2s ease;
+}
+.galerie-btn:hover { transform: scale(1.02); }
+.galerie-btn img { display: block; width: 100%; height: auto; }
+
+/* ---------- 12. Étapes du processus (icônes SVG) ---------- */
+.etape-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 84px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: var(--ds-light);
+    border: 3px dashed var(--ds-orange);
+}
+
+/* Pastilles de couleur de la palette (le nom et le code sont écrits : pas seulement la couleur) */
+.pastille {
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: .5rem;
+    vertical-align: -.15rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .25);
+}
+
+/* ---------- 13. Pied de page ---------- */
+.site-footer {
+    margin-top: 0;
+    padding: 3rem 0 1.5rem;
+    background: var(--ds-navy);
+    color: #DCE6F6;
+    border-top: 4px solid var(--ds-orange);
+}
+.site-footer h2 { color: #fff; font-size: 1rem; text-transform: uppercase; letter-spacing: .08em; }
+.site-footer a { color: #fff; overflow-wrap: anywhere; }
+.site-footer a:hover { color: var(--ds-orange); }
+.site-footer address { margin: 0; font-style: normal; }
+.site-footer .legal { color: #B9C7E0; font-size: .9rem; border-top: 1px solid #2F4A7A; }
+
+/* ---------- 14. Retour en haut de page ---------- */
+.retour-haut { font-weight: 600; }
+
+/* ---------- 15. Respect des préférences d'animation ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .service-card, .galerie-btn { transition: none; }
+    .service-card:hover, .galerie-btn:hover { transform: none; }
+    html { scroll-behavior: auto; }
+}

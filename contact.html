@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact et soumission | Devy Studio</title>
+    <meta name="description" content="Demandez une soumission à Devy Studio : formulaire de contact, coordonnées et questions fréquentes.">
+    <meta name="theme-color" content="#12284C">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <!-- Polices Google : Poppins (titres) et Inter (texte) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Feuille de style personnalisée (chargée après Bootstrap pour pouvoir le personnaliser) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="haut">
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+    <!-- ===== EN-TÊTE ET NAVIGATION ===== -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-navy" data-bs-theme="dark" aria-label="Navigation principale">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="images/logo.svg" alt="" width="40" height="40">
+                    <span>Devy Studio</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Ouvrir ou fermer le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="multimedia.html">Multimédia</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenu" tabindex="-1">
+        <!-- ===== EN-TÊTE DE PAGE ===== -->
+        <section class="page-header py-4 py-lg-5">
+            <div class="container">
+                <nav aria-label="Fil d'Ariane">
+                    <ol class="breadcrumb mb-3">
+                        <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                    </ol>
+                </nav>
+                <h1 class="display-6 mb-2">Contact et soumission</h1>
+                <p class="lead mb-0">Décrivez votre projet : nous vous répondons dans un délai d'un jour ouvrable.</p>
+            </div>
+        </section>
+
+        <section class="py-5" aria-label="Formulaire et coordonnées">
+            <div class="container">
+                <div class="row g-4 g-xl-5">
+                    <!-- ===== FORMULAIRE ===== -->
+                    <div class="col-12 col-lg-7">
+                        <h2 class="section-title mb-4">Demande de soumission</h2>
+
+                        <!-- Message de confirmation (affiché par js/contact.js) -->
+                        <div id="confirmation" class="alert alert-success d-none" role="alert" tabindex="-1">
+                            <strong>Merci !</strong> Votre demande a bien été enregistrée. Nous vous répondrons sous peu.
+                        </div>
+
+                        <form id="formContact" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="nom" class="form-label">Nom complet <span class="text-danger" aria-hidden="true">*</span></label>
+                                    <input type="text" class="form-control" id="nom" name="nom" autocomplete="name" required>
+                                    <div class="invalid-feedback">Veuillez indiquer votre nom.</div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="courriel" class="form-label">Adresse courriel <span class="text-danger" aria-hidden="true">*</span></label>
+                                    <input type="email" class="form-control" id="courriel" name="courriel" autocomplete="email" required>
+                                    <div class="invalid-feedback">Veuillez entrer une adresse courriel valide.</div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="service" class="form-label">Service souhaité <span class="text-danger" aria-hidden="true">*</span></label>
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="" selected disabled>Choisissez un service…</option>
+                                        <option>Broderie industrielle</option>
+                                        <option>Flocage flex</option>
+                                        <option>Sublimation sur tasses</option>
+                                        <option>Photo et montage</option>
+                                        <option>Banderoles grand format</option>
+                                        <option>Projet sur mesure</option>
+                                    </select>
+                                    <div class="invalid-feedback">Veuillez choisir un service.</div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="quantite" class="form-label">Quantité approximative</label>
+                                    <input type="number" class="form-control" id="quantite" name="quantite" min="1" inputmode="numeric" aria-describedby="aide-quantite">
+                                    <div id="aide-quantite" class="form-text">Laissez vide si vous ne la connaissez pas encore.</div>
+                                </div>
+
+                                <fieldset class="col-12">
+                                    <legend class="form-label fs-6">Délai souhaité <span class="text-danger" aria-hidden="true">*</span></legend>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="delai" id="delai-standard" value="standard" required>
+                                        <label class="form-check-label" for="delai-standard">Standard (7 à 10 jours ouvrables)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="delai" id="delai-rapide" value="rapide">
+                                        <label class="form-check-label" for="delai-rapide">Rapide (3 à 5 jours ouvrables)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="delai" id="delai-urgent" value="urgent">
+                                        <label class="form-check-label" for="delai-urgent">Urgent (48 heures, selon disponibilité)</label>
+                                    </div>
+                                    <div class="invalid-feedback" id="erreur-delai">Veuillez choisir un délai.</div>
+                                </fieldset>
+
+                                <fieldset class="col-12">
+                                    <legend class="form-label fs-6">Options</legend>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="fichier-pret" name="fichier-pret" value="oui">
+                                        <label class="form-check-label" for="fichier-pret">J'ai déjà un fichier de mon logo</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="maquette" name="maquette" value="oui">
+                                        <label class="form-check-label" for="maquette">Je souhaite recevoir une maquette avant la production</label>
+                                    </div>
+                                </fieldset>
+
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Décrivez votre projet <span class="text-danger" aria-hidden="true">*</span></label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" minlength="10" required aria-describedby="aide-message"></textarea>
+                                    <div id="aide-message" class="form-text">Type d'articles, couleurs, emplacement du logo, date de livraison…</div>
+                                    <div class="invalid-feedback">Veuillez décrire votre projet (10 caractères minimum).</div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="consentement" name="consentement" required>
+                                        <label class="form-check-label" for="consentement">J'accepte d'être contacté(e) au sujet de ma demande. <span class="text-danger" aria-hidden="true">*</span></label>
+                                        <div class="invalid-feedback">Votre accord est nécessaire pour traiter la demande.</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-grid d-sm-flex gap-2 align-items-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Envoyer la demande</button>
+                                    <button type="reset" class="btn btn-outline-secondary btn-lg">Effacer</button>
+                                </div>
+                                <p class="form-text mb-0" id="etat-brouillon" role="status"></p>
+                                <p class="form-text mb-0"><span aria-hidden="true">*</span> Champs obligatoires. Ce formulaire de démonstration n'envoie aucune donnée.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- ===== COORDONNÉES ET FAQ ===== -->
+                    <div class="col-12 col-lg-5">
+                        <h2 class="section-title mb-4">Coordonnées</h2>
+                        <ul class="list-group list-group-flush mb-5">
+                            <li class="list-group-item px-0"><strong>Adresse :</strong> 123, rue Exemple, Moncton (N.-B.)</li>
+                            <li class="list-group-item px-0"><strong>Téléphone :</strong> <a href="tel:+15065550100">506&#8209;555&#8209;0100</a></li>
+                            <li class="list-group-item px-0"><strong>Courriel :</strong> <a href="mailto:contact@devystudio.example">contact@devystudio.example</a></li>
+                            <li class="list-group-item px-0"><strong>Heures d'ouverture :</strong> du lundi au vendredi, de 8 h à 17 h</li>
+                        </ul>
+
+                        <h2 class="section-title mb-4">Questions fréquentes</h2>
+                        <div class="accordion" id="faq">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq0" aria-expanded="true" aria-controls="faq0">Y a-t-il une quantité minimale ?</button>
+                            </h3>
+                            <div id="faq0" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                                <div class="accordion-body">Oui, selon le procédé : 12 pièces en broderie, 6 tasses en sublimation. Le flocage et les banderoles se commandent à l'unité. Le tableau de la page <a href="apropos.html#forfaits">À propos</a> résume ces minimums.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">Quels fichiers dois-je fournir ?</button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faq">
+                                <div class="accordion-body">Un logo vectoriel (AI, SVG ou PDF) donne le meilleur résultat. À défaut, un PNG ou un JPEG en haute résolution suffit : nous le préparons pour la production.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Quels sont les délais ?</button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                                <div class="accordion-body">Comptez de 2 à 10 jours ouvrables selon le service. Choisissez « Rapide » ou « Urgent » dans le formulaire si votre échéance est serrée.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Livrez-vous hors de Moncton ?</button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                                <div class="accordion-body">Oui, les commandes sont expédiées partout au Nouveau-Brunswick et dans les autres provinces. La remise en atelier reste possible sur rendez-vous.</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-5">
+                    <p class="d-flex align-items-center gap-2 mb-2 fs-5 fw-bold text-white">
+                        <img src="images/logo.svg" alt="" width="44" height="44">
+                        Devy Studio
+                    </p>
+                    <p class="mb-0">Studio multimédia de personnalisation et d'impression : broderie industrielle, flocage, sublimation, photo et grand format.</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2>Navigation</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="multimedia.html">Multimédia</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h2>Nous joindre</h2>
+                    <address>
+                        123, rue Exemple<br>
+                        Moncton (N.-B.)<br>
+                        <a href="tel:+15065550100">506&#8209;555&#8209;0100</a><br>
+                        <a href="mailto:contact@devystudio.example">contact@devystudio.example</a>
+                    </address>
+                </div>
+            </div>
+            <div class="legal d-flex flex-column flex-sm-row justify-content-between gap-2 mt-4 pt-3">
+                <p class="mb-0">&copy; 2026 Devy Studio. Entreprise fictive, site de démonstration.</p>
+                <p class="mb-0"><a class="retour-haut" href="#haut">&uarr; Retour en haut de la page</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript de Bootstrap (menu hamburger, accordéon, fenêtre modale) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

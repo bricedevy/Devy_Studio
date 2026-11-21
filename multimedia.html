@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie et multimédia | Devy Studio</title>
+    <meta name="description" content="Galerie de réalisations, vidéo de présentation, jingle et processus de production de Devy Studio.">
+    <meta name="theme-color" content="#12284C">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <!-- Polices Google : Poppins (titres) et Inter (texte) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Feuille de style personnalisée (chargée après Bootstrap pour pouvoir le personnaliser) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="haut">
+    <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+    <!-- ===== EN-TÊTE ET NAVIGATION ===== -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-navy" data-bs-theme="dark" aria-label="Navigation principale">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="images/logo.svg" alt="" width="40" height="40">
+                    <span>Devy Studio</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Ouvrir ou fermer le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="apropos.html">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="multimedia.html" aria-current="page">Multimédia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenu" tabindex="-1">
+        <!-- ===== EN-TÊTE DE PAGE ===== -->
+        <section class="page-header py-4 py-lg-5">
+            <div class="container">
+                <nav aria-label="Fil d'Ariane">
+                    <ol class="breadcrumb mb-3">
+                        <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Multimédia</li>
+                    </ol>
+                </nav>
+                <h1 class="display-6 mb-2">Galerie et multimédia</h1>
+                <p class="lead mb-0">Nos réalisations, le studio en vidéo, notre ambiance sonore et notre façon de travailler.</p>
+            </div>
+        </section>
+
+        <!-- ===== GALERIE ===== -->
+        <section id="galerie" class="py-5" aria-labelledby="titre-galerie">
+            <div class="container">
+                <h2 id="titre-galerie" class="section-title mb-3">Nos réalisations</h2>
+                <p class="mb-4">Cliquez sur une image pour l'agrandir. Les visuels de cette galerie sont des illustrations.</p>
+                <div class="row g-3 g-md-4">
+                    <div class="col-6 col-md-4">
+                        <figure class="mb-0">
+                            <button type="button" class="galerie-btn" data-bs-toggle="modal" data-bs-target="#modalGalerie"
+                                data-src="images/galerie-casquettes-1200.webp" data-titre="Casquettes brodées" data-alt="Deux casquettes brodées du logo D : une bleu marine, une blanche à visière orange." data-texte="Broderie du logo sur casquettes, en série de 24."
+                                aria-label="Agrandir l'image : Casquettes brodées">
+                                <img src="images/galerie-casquettes-600.webp" srcset="images/galerie-casquettes-600.webp 600w, images/galerie-casquettes-1200.webp 1200w" sizes="(min-width: 992px) 360px, (min-width: 768px) 33vw, 50vw" width="1200" height="800" alt="Deux casquettes brodées du logo D : une bleu marine, une blanche à visière orange." class="img-fluid" loading="lazy">
+                            </button>
+                            <figcaption class="small mt-2 fw-semibold">Casquettes brodées</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <figure class="mb-0">
+                            <button type="button" class="galerie-btn" data-bs-toggle="modal" data-bs-target="#modalGalerie"
+                                data-src="images/galerie-chandails-1200.webp" data-titre="Chandails d'équipe" data-alt="Trois chandails d'équipe floqués : bleu marine numéro 7, bleu numéro 10 et orange numéro 23." data-texte="Numéros en flocage flex pour une équipe sportive."
+                                aria-label="Agrandir l'image : Chandails d'équipe">
+                                <img src="images/galerie-chandails-600.webp" srcset="images/galerie-chandails-600.webp 600w, images/galerie-chandails-1200.webp 1200w" sizes="(min-width: 992px) 360px, (min-width: 768px) 33vw, 50vw" width="1200" height="800" alt="Trois chandails d'équipe floqués : bleu marine numéro 7, bleu numéro 10 et orange numéro 23." class="img-fluid" loading="lazy">
+                            </button>
+                            <figcaption class="small mt-2 fw-semibold">Chandails d'équipe</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <figure class="mb-0">
+                            <button type="button" class="galerie-btn" data-bs-toggle="modal" data-bs-target="#modalGalerie"
+                                data-src="images/galerie-tasses-1200.webp" data-titre="Tasses sublimées" data-alt="Trois tasses personnalisées par sublimation : motif de vagues orange et bleu, rayures marine et orange, médaillon marine." data-texte="Trois motifs imprimés en pleine couleur par sublimation."
+                                aria-label="Agrandir l'image : Tasses sublimées">
+                                <img src="images/galerie-tasses-600.webp" srcset="images/galerie-tasses-600.webp 600w, images/galerie-tasses-1200.webp 1200w" sizes="(min-width: 992px) 360px, (min-width: 768px) 33vw, 50vw" width="1200" height="800" alt="Trois tasses personnalisées par sublimation : motif de vagues orange et bleu, rayures marine et orange, médaillon marine." class="img-fluid" loading="lazy">
+                            </button>
+                            <figcaption class="small mt-2 fw-semibold">Tasses sublimées</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <figure class="mb-0">
+                            <button type="button" class="galerie-btn" data-bs-toggle="modal" data-bs-target="#modalGalerie"
+                                data-src="images/galerie-banderole-1200.webp" data-titre="Banderole d'événement" data-alt="Banderole orange « Festival d'été » tendue entre deux poteaux." data-texte="Banderole grand format avec œillets de fixation."
+                                aria-label="Agrandir l'image : Banderole d'événement">
+                                <img src="images/galerie-banderole-600.webp" srcset="images/galerie-banderole-600.webp 600w, images/galerie-banderole-1200.webp 1200w" sizes="(min-width: 992px) 360px, (min-width: 768px) 33vw, 50vw" width="1200" height="800" alt="Banderole orange « Festival d'été » tendue entre deux poteaux." class="img-fluid" loading="lazy">
+                            </button>
+                            <figcaption class="small mt-2 fw-semibold">Banderole d'événement</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <figure class="mb-0">
+                            <button type="button" class="galerie-btn" data-bs-toggle="modal" data-bs-target="#modalGalerie"
+                                data-src="images/galerie-sacs-1200.webp" data-titre="Sacs fourre-tout" data-alt="Deux sacs fourre-tout portant le logo D : un beige avec le logo marine, un marine avec le logo orange." data-texte="Sacs brodés pour une campagne de fidélisation."
+                                aria-label="Agrandir l'image : Sacs fourre-tout">
+                                <img src="images/galerie-sacs-600.webp" srcset="images/galerie-sacs-600.webp 600w, images/galerie-sacs-1200.webp 1200w" sizes="(min-width: 992px) 360px, (min-width: 768px) 33vw, 50vw" width="1200" height="800" alt="Deux sacs fourre-tout portant le logo D : un beige avec le logo marine, un marine avec le logo orange." class="img-fluid" loading="lazy">
+                            </button>
+                            <figcaption class="small mt-2 fw-semibold">Sacs fourre-tout</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <figure class="mb-0">
+                            <button type="button" class="galerie-btn" data-bs-toggle="modal" data-bs-target="#modalGalerie"
+                                data-src="images/galerie-portrait-1200.webp" data-titre="Portrait en studio" data-alt="Séance de portrait en studio : une personne devant un fond bleu clair, entre deux éclairages." data-texte="Séance photo avec retouche et livraison numérique."
+                                aria-label="Agrandir l'image : Portrait en studio">
+                                <img src="images/galerie-portrait-600.webp" srcset="images/galerie-portrait-600.webp 600w, images/galerie-portrait-1200.webp 1200w" sizes="(min-width: 992px) 360px, (min-width: 768px) 33vw, 50vw" width="1200" height="800" alt="Séance de portrait en studio : une personne devant un fond bleu clair, entre deux éclairages." class="img-fluid" loading="lazy">
+                            </button>
+                            <figcaption class="small mt-2 fw-semibold">Portrait en studio</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VIDÉOS ===== -->
+        <section id="videos" class="py-5 bg-light-ds" aria-labelledby="titre-videos">
+            <div class="container">
+                <h2 id="titre-videos" class="section-title mb-4">Le studio en vidéo</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-lg-6">
+                        <!-- Vidéo locale : élément <video>, contrôles, ratio 16:9 conservé -->
+                        <figure class="mb-0">
+                            <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-sm">
+                                <video controls preload="metadata" playsinline poster="images/video-poster.webp" aria-describedby="legende-video-locale">
+                                    <source src="video/presentation-studio.mp4" type="video/mp4">
+                                    <p>Votre navigateur ne peut pas lire cette vidéo. <a href="video/presentation-studio.mp4">Télécharger la vidéo (MP4)</a>.</p>
+                                </video>
+                            </div>
+                            <figcaption id="legende-video-locale" class="small mt-2">Présentation animée du studio (12 s, sans son) : le logo est cousu, puis la machine à 24 têtes et les six services sont présentés.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <!-- Vidéo externe : iframe YouTube dans un conteneur .ratio pour garder le ratio 16:9 -->
+                        <figure class="mb-0">
+                            <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-sm">
+                                <iframe src="https://www.youtube-nocookie.com/embed/MIrALR5N4Co"
+                                    title="Vidéo YouTube : ZSK Racer SF, machine à broder industrielle multi-têtes"
+                                    loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <figcaption class="small mt-2">Ce type de machine en fonctionnement : ZSK Racer SF, publiée par Stocks Sewing Machines Ltd. <a href="https://www.youtube.com/watch?v=MIrALR5N4Co" target="_blank" rel="noopener noreferrer">Regarder sur YouTube<span class="visually-hidden"> (s'ouvre dans un nouvel onglet)</span></a>.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== AUDIO ===== -->
+        <section id="audio" class="py-5" aria-labelledby="titre-audio">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <h2 id="titre-audio" class="section-title mb-4">L'ambiance sonore du studio</h2>
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <p id="legende-audio" class="fw-semibold mb-2">Jingle de Devy Studio (19 secondes, musique originale)</p>
+                                <audio controls preload="none" class="w-100" aria-describedby="legende-audio">
+                                    <source src="audio/jingle-devy-studio.mp3" type="audio/mpeg">
+                                    <p>Votre navigateur ne peut pas lire ce fichier audio. <a href="audio/jingle-devy-studio.mp3">Télécharger le jingle (MP3)</a>.</p>
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROCESSUS (icônes SVG) ===== -->
+        <section id="processus" class="py-5 bg-light-ds" aria-labelledby="titre-processus">
+            <div class="container">
+                <h2 id="titre-processus" class="section-title text-center mb-5">Du fichier au produit fini</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-lg-3 text-center">
+                        <span class="etape-icone">
+                            <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" focusable="false"><path d="M12 6h18l8 8v28H12z" fill="none" stroke="#12284C" stroke-width="3" stroke-linejoin="round"/><path d="M30 6v8h8" fill="none" stroke="#12284C" stroke-width="3" stroke-linejoin="round"/><path d="M18 26h14M18 33h10" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/></svg>
+                        </span>
+                        <h3 class="h5">1. Votre fichier</h3>
+                        <p>Vous nous envoyez votre logo ou votre visuel, de préférence en format vectoriel.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 text-center">
+                        <span class="etape-icone">
+                            <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" focusable="false"><rect x="5" y="9" width="38" height="26" rx="3" fill="none" stroke="#12284C" stroke-width="3"/><path d="M17 42h14M24 35v7" stroke="#12284C" stroke-width="3" stroke-linecap="round"/><path d="M15 22l6 6 12-12" fill="none" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <h3 class="h5">2. Épreuve numérique</h3>
+                        <p>Nous préparons le fichier de production et vous soumettons une épreuve à approuver.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 text-center">
+                        <span class="etape-icone">
+                            <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" focusable="false"><path d="M35 5L21 34" stroke="#12284C" stroke-width="3" stroke-linecap="round"/><path d="M19.6 33.5L22.6 35L20.6 41Z" fill="#12284C"/><ellipse cx="34.3" cy="8.2" rx="1" ry="2.8" transform="rotate(25 34.3 8.2)" fill="#F3F6FB"/><path d="M35 9C44 14 43 25 33 28" fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/><path d="M5 43h38" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="6 5"/></svg>
+                        </span>
+                        <h3 class="h5">3. Production</h3>
+                        <p>La machine à 24 têtes, les presses ou l'imprimante réalisent votre commande.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 text-center">
+                        <span class="etape-icone">
+                            <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" focusable="false"><path d="M6 16l18-9 18 9v20l-18 9-18-9z" fill="none" stroke="#12284C" stroke-width="3" stroke-linejoin="round"/><path d="M6 16l18 9 18-9M24 25v20" fill="none" stroke="#12284C" stroke-width="3" stroke-linejoin="round"/><path d="M15 11.5l18 9" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round"/></svg>
+                        </span>
+                        <h3 class="h5">4. Livraison</h3>
+                        <p>Votre commande est contrôlée, emballée et remise ou expédiée à la date prévue.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== IDENTITÉ VISUELLE (logo SVG) ===== -->
+        <section id="identite" class="py-5" aria-labelledby="titre-identite">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
+                        <img src="images/logo.svg" alt="Logo de Devy Studio : la lettre D blanche dans un carré bleu marine bordé de points de couture orange, avec une aiguille" width="180" height="180" class="img-fluid" loading="lazy">
+                    </div>
+                    <div class="col-12 col-sm-7 col-md-8 col-lg-9">
+                        <h2 id="titre-identite" class="h3 mb-3">Notre identité</h2>
+                        <p>Le logo est un fichier SVG : il reste net à toute taille, de l'onglet du navigateur à la banderole. La lettre D est entourée d'une ligne de points de couture, qui rappelle notre métier.</p>
+                        <ul class="list-unstyled mb-0">
+                            <li><span class="pastille" style="background:#12284C"></span>Bleu marine <code>#12284C</code></li>
+                            <li><span class="pastille" style="background:#1D5FD1"></span>Bleu vif <code>#1D5FD1</code></li>
+                            <li><span class="pastille" style="background:#F59E0B"></span>Orange « fil » <code>#F59E0B</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FENÊTRE MODALE : agrandissement des images de la galerie ===== -->
+        <div class="modal fade" id="modalGalerie" tabindex="-1" aria-labelledby="modalGalerieTitre">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="modalGalerieTitre">Image</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <img id="modalGalerieImg" src="images/galerie-casquettes-1200.webp" width="1200" height="800" alt="" class="img-fluid w-100">
+                    </div>
+                    <div class="modal-footer justify-content-start">
+                        <p class="mb-0" id="modalGalerieTexte"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-5">
+                    <p class="d-flex align-items-center gap-2 mb-2 fs-5 fw-bold text-white">
+                        <img src="images/logo.svg" alt="" width="44" height="44">
+                        Devy Studio
+                    </p>
+                    <p class="mb-0">Studio multimédia de personnalisation et d'impression : broderie industrielle, flocage, sublimation, photo et grand format.</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2>Navigation</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="multimedia.html">Multimédia</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h2>Nous joindre</h2>
+                    <address>
+                        123, rue Exemple<br>
+                        Moncton (N.-B.)<br>
+                        <a href="tel:+15065550100">506&#8209;555&#8209;0100</a><br>
+                        <a href="mailto:contact@devystudio.example">contact@devystudio.example</a>
+                    </address>
+                </div>
+            </div>
+            <div class="legal d-flex flex-column flex-sm-row justify-content-between gap-2 mt-4 pt-3">
+                <p class="mb-0">&copy; 2026 Devy Studio. Entreprise fictive, site de démonstration.</p>
+                <p class="mb-0"><a class="retour-haut" href="#haut">&uarr; Retour en haut de la page</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript de Bootstrap (menu hamburger, accordéon, fenêtre modale) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/galerie.js"></script>
+</body>
+</html>

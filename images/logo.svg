@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="logo-t logo-d">
+  <title id="logo-t">Devy Studio</title>
+  <desc id="logo-d">Lettre D blanche dans un carré bleu marine bordé d'une ligne de points de couture orange, avec une aiguille.</desc>
+  <rect x="3" y="3" width="114" height="114" rx="26" fill="#12284C"/>
+  <rect x="12" y="12" width="96" height="96" rx="19" fill="none" stroke="#F59E0B" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M34 32H57C77 32 89 44 89 60C89 76 77 88 57 88H34ZM49 45V75H57C68 75 75 69 75 60C75 51 68 45 57 45Z"/>
+  <g transform="rotate(38 84 30)">
+    <rect x="82.5" y="8" width="3" height="40" rx="1.5" fill="#F59E0B"/>
+    <ellipse cx="84" cy="14" rx="0.9" ry="3.2" fill="#12284C"/>
+  </g>
+</svg>
